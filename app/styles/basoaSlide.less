@@ -82,9 +82,9 @@
 
 .basoaSlide-control {
   position: absolute;
-  top: 0;
+  top: 300px;
   left: 0;
-  bottom: 0;
+  // bottom: 0;
   width: @basoaSlide-control-width;
   .opacity(@basoaSlide-control-opacity);
   font-size: @basoaSlide-control-font-size;
@@ -96,22 +96,15 @@
 
   // Set gradients for backgrounds
   &.left {
-    #gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
+    top: 200px;
   }
   &.right {
     left: auto;
     right: 0;
-    #gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
+    background-color: @orange;
+    top: 200px;
   }
-
-  // Hover/focus state
-  &:hover,
-  &:focus {
-    outline: none;
-    color: @basoaSlide-control-color;
-    text-decoration: none;
-    .opacity(.9);
-  }
+  
 
   // Toggles
   .icon-prev,
