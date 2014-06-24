@@ -1,0 +1,333 @@
+@import "../bower_components/bootstrap/less/bootstrap.less";
+@import "basoaSlide.less";
+@icon-font-path: "../bower_components/bootstrap/dist/fonts/";
+
+// -----
+// COLORES
+// -----
+@green: #B4C9C1;
+@brown: #6A5B4D;
+@orange: #EF625B;
+@white: #ffffff;
+@black: #000;
+
+
+
+// Tipografías
+@proxima: "proxima-nova",sans-serif ;
+@myriad: "myriad-pro",sans-serif ;
+
+
+//Generales
+body {
+	font-family: @proxima;
+}
+
+.center {
+	text-align: center;
+}
+
+.inner-30 {
+	padding: 30px 15px;
+}
+
+.inner-50 {
+	padding: 50px 15px;
+}
+
+.inner-45 {
+	padding: 45px 0px;
+}
+.inner-65 {
+	padding: 65px 15px ;
+}
+
+.inner {
+	padding: 75px 15px ;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+font-family: @proxima;
+}
+
+.shadow {
+text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
+}
+
+// Margins y paddings
+
+.m0 {
+	margin: 0;
+}
+
+.mt5 {
+	margin-top: 5px;
+}
+
+.mt10 {
+	margin-top: 10px;
+}
+
+.mb10 {
+	margin-bottom: 10px;
+}
+
+.mt20 {
+	margin-top: 20px;
+}
+
+.mb20 {
+	margin-bottom: 20px;
+}
+.mt30 {
+	margin-top: 30px;
+}
+.mb30 {
+	margin-bottom: 30px;
+}
+
+.mt40 {
+	margin-top: 40px;
+}
+
+.mb40 {
+	margin-bottom: 40px;
+}
+
+.mt50 {
+	margin-top: 50px;
+}
+.mb50 {
+	margin-bottom: 50px;
+}
+
+.mt60 {
+	margin-top: 60px;
+}
+
+
+.pt10 {
+	padding-top: 10px;
+}
+
+.pt20 {
+	padding-top: 20px;
+}
+
+.pt30 {
+	padding-top: 30px;
+}
+
+.pt10 {
+	padding-bottom: 10px;
+}
+
+.pt20 {
+	padding-bottom: 20px;
+}
+
+.pt30 {
+	padding-bottom: 30px;
+}
+
+.divide60 {
+    width: 100%;
+    height: 60px;
+}
+
+.divide75 {
+    width: 100%;
+    height: 75px;
+}
+.divide80 {
+    width: 100%;
+    height: 80px;
+}
+.divide85 {
+    width: 100%;
+    height: 100px;
+}
+
+
+// -----
+// SECCIONES
+// -----
+.presentacion {
+	background-image: url("../images/uno.jpg");
+	height: 700px;
+	background-size: cover;
+	background-position: center;
+}
+
+
+.principal {
+	background-image: url("../images/uno.jpg");
+	height: 700px;
+	background-size: cover;
+	background-position: center;
+}
+
+.dos {
+	background-image: url("../images/dos.jpg");
+	height: 700px;
+	background-size: cover;
+	background-position: center;
+}
+
+
+.footer-lateral {
+	background-color: #B4C9C1;
+	height: 800px;
+}
+
+
+.menus {
+ position: fixed;
+ width: 100%;
+ top: 0;
+}
+
+.menus-interior {
+ position: fixed;
+ width: 100%;
+ top: 0;	
+}
+
+section {
+	padding: 100px 0px;
+	color: @white;
+}
+
+// ------
+// MENU
+// ------
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.navbar-default {
+	border: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+	padding-top: 50px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	color: @white;
+	font-weight: bold;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: @white;
+	background-color: fade(@green, 50%);
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: @white;
+	background-color: fade(@green, 50%);
+}
+
+.navbar-default {
+	background-color: transparent;
+}
+
+.navbar.container {
+ 	margin-top: 0px; 
+}
+
+.solo-menu {
+	background-color: fade(@brown, 50%);
+}
+
+.idiomas > li {
+	list-style: none;
+	padding: 0 5px;
+	margin: 0;
+	line-height: 15px;
+  font-weight: bold;
+}
+
+.idiomas {
+	margin-top: 8px;
+	margin-right: 15px;
+}
+
+.idiomas a {
+	color: @white;
+}
+
+.idiomas a:hover {
+	opacity: 0.8;
+}
+
+// ------
+// EXPERIMENTA
+// ------
+.basoaSlide, .item, .active{
+	height:100%;
+}
+
+.basoaSlide-inner{ height:100%;
+}
+
+
+
+// ------
+// SLIDE
+// ------
+
+.basoaSlide-control {
+position: absolute;
+top: 50px;
+left: 0;
+bottom: auto; 
+width: 15%;
+opacity: 1;
+background-image: none;
+}
+
+.basoaSlide-control .right {
+background: none;
+right: 90px;
+background-color: @orange;
+background-image: none;
+}
+
+
+/* faster sliding speed */
+.basoaSlide-inner > .item {
+    -webkit-transition: 0.3s ease-in-out left;
+    -moz-transition: 0.3s ease-in-out left;
+    -o-transition: 0.3s ease-in-out left;
+    transition: 0.3s ease-in-out left;
+}
+
+/* keep full widget on smaller screens */
+@media (max-width: 767px) { 
+	body {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+
+.efara {
+	width: 100%;
+}
+
+.puntal {
+	height: 700px;
+	border-top: 2px dotted;
+	background-color: purple;
+}
+
+.puntal-dos {
+	height: 700px;
+	border-top: 2px dotted;
+	background-color: blue;
+}
