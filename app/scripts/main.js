@@ -5,6 +5,11 @@ $(document).ready(function() {
     slidesColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
     // css3: true ,
     slidesNavigation: true,
+    afterLoad: function(anchorLink, index){
+     if(anchorLink == '3rdPage'){
+          console.log('hola afterLoad');
+     }
+    },
     afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
       if(anchorLink == '3rdPage'){
       }
@@ -12,10 +17,18 @@ $(document).ready(function() {
   });
 
   $('#boton').click(function(e){
-    $.fn.fullpage.moveTo('3rdPage', 1);
+
+    // $.fn.fullpage.moveTo('3rdPage', 1);
     setTimeout(function() {
-      $('.menus').addClass('transicion');
-    }, 1285);
+      $('.yo').addClass('transicion');
+    }, 100);
+    $('#home').remove();
+  });
+
+  $('.casas').click(function(e){
+    e.preventDefault();
+    $('.beigorri').addClass('home-casas-frente');
+    console.log('name');
   });
 
 });
