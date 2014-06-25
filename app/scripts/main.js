@@ -12,8 +12,10 @@ $(document).ready(function() {
   });
 
   $('#boton').click(function(e){
-    $('.menus').addClass('transicion');
-    $.fn.fullpage.moveTo('3rdPage', 1); 
+    $.fn.fullpage.moveTo('3rdPage', 1);
+    setTimeout(function() {
+      $('.menus').addClass('transicion');
+    }, 1285);
   });
 
 });
