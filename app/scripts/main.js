@@ -28,7 +28,10 @@ $(document).ready(function() {
 
   $('.casas').click(function(e){
     e.preventDefault();
-    $('.beigorri').addClass('home-casas-frente');
+    $('.carrusel-off').each(function(index){
+     $(this).removeClass('active');
+    });
+    $('#'+e.target.id+'-carrusel').addClass('active'); 
     console.log('name');
   });
 
