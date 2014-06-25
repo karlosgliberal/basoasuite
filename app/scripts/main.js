@@ -1,7 +1,30 @@
-var myScroll;
+$(document).ready(function() {
 
-function loaded () {
-  myScroll = new IScroll('#wrapper', { mouseWheel: true, click: true });
-}
+  $('.home').fullpage({
+    anchors: ['firstPage', 'secondPage', '3rdPage'],
+    slidesColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+    css3: true ,
+    slidesNavigation: true,
+    afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+      if(anchorLink == '3rdPage'){
+      }
+    }   
+  });
 
-document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+  $('#boton').click(function(e){
+    $('.menus').addClass('transicion');
+    $.fn.fullpage.moveTo('3rdPage', 1); 
+  });
+
+});
+
+  // $('#segunda').fullpage({
+  //   anchors: ['dosuno', 'dosdos', 'dostres'],
+  //   slidesColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+  //   css3: true ,
+  //   slidesNavigation: true,
+  //   autoScrolling: false     
+  // });
+
+
+
