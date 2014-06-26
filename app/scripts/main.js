@@ -42,10 +42,10 @@ $(document).ready(function() {
   $('.casas').click(function(e){
     e.preventDefault();
     $('.carrusel-off').each(function(index){
-     $(this).transition({opacity:0}, 10, 'ease');
+     $(this).transition({opacity:0, dalay:50});
      //$(this).removeClass('active');
     });
-    $('#'+e.target.id+'-carrusel-wrapper').transition({opacity:1}, 500, 'ease');
+    $('#'+e.target.id+'-carrusel-wrapper').transition({opacity:1, delay:50});
     $('#'+e.target.id+'-carrusel-wrapper').addClass('active');
   });
 
