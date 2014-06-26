@@ -18,12 +18,10 @@ $(document).ready(function() {
   });
 
   $('#boton').click(function(e){
-
-    // $.fn.fullpage.moveTo('3rdPage', 1);
+    $('.yo').transition({ left: 0 }, 800, 'ease');
     setTimeout(function() {
-      $('.yo').addClass('transicion');
-    }, 100);
     $('#home').remove();
+    }, 900);
   });
 
   $('.casas').click(function(e){
