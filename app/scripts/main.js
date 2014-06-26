@@ -18,7 +18,7 @@ $(document).ready(function() {
   });
 
   $('#boton-casas').click(function(e){
-    $('.yo').transition({ left: 0 }, 800, 'ease');
+    $('.home-casas').transition({ left: 0 }, 800, 'ease');
     $('#boton-casas').transition({opacity:0}, 800, 'ease');
     $('#home').transition({opacity:0}, 2000, 'ease');
     setTimeout(function() {
@@ -30,7 +30,7 @@ $(document).ready(function() {
 
   $('#boton-volver').click(function(e){
     $('#home').transition({opacity:1});
-    $('.yo').transition({ left: '80%' }, 800, 'ease');
+    $('.home-casas').transition({ left: '80%' }, 800, 'ease');
     $('#boton-volver').transition({opacity:0}, 800, 'ease');
     setTimeout(function() {
       $('#boton-casas').transition({opacity:1}, 'ease');
