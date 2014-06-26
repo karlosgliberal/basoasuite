@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.carousel').carousel();
+  $('.carousel').carousel({interval:false});
   $('.home').fullpage({
     anchors: ['firstPage', 'secondPage', '3rdPage'],
     resize: false,
@@ -42,8 +42,10 @@ $(document).ready(function() {
   $('.casas').click(function(e){
     e.preventDefault();
     $('.carrusel-off').each(function(index){
-     $(this).removeClass('active');
+     $(this).transition({opacity:0}, 10, 'ease');
+     //$(this).removeClass('active');
     });
+    $('#'+e.target.id+'-carrusel-wrapper').transition({opacity:1}, 500, 'ease');
     $('#'+e.target.id+'-carrusel-wrapper').addClass('active');
   });
 
