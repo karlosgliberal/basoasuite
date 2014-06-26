@@ -185,24 +185,25 @@ text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
 // SECCIONES
 // -----
 
+.section.table, .slide.table {
+margin: 0;
+}
+
 .presentacion {
 	background-image: url("../images/uno.jpg");
-	height: 700px;
 	background-size: cover;
 	background-position: center;
 }
 
 
 .principal {
-	background-image: url("../images/uno.jpg");
-	height: 700px;
+	background-image: url("../images/prueba1.jpg");
 	background-size: cover;
 	background-position: center;
 }
 
 .dos {
 	background-image: url("../images/dos.jpg");
-	height: 700px;
 	background-size: cover;
 	background-position: center;
 }
@@ -227,24 +228,46 @@ text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
  top: 0;	
 }
 
-section {
-	padding: 100px 0px;
-	color: @white;
-}
-
 
 .texto-home-wrapper {
 	color: @white;
-	background: fade(@brown, 50%)
+	background: fade(@brown, 50%);
+	margin: 0px 40% 0px 20%;
 }
 
 .floritura {
-	width: 3%;
+	width: 12%;
+	margin: 15px 0px 17px 0px;
+}
+
+.floritura-rotate {
+ transform: rotate(180deg);
+}
+
+.nosotros {
+	font-family: @cali;
+	font-size: 25px;
+	margin: 0;
+	padding: 0;
+	line-height: 0.7em;
+}
+
+.historia{
+	font-family: @calibold;
+	font-size: 31px;
+	margin: 0;
+	padding: 0;
 }
 
 // ------
 // MENUS
 // ------
+
+@media (min-width: @screen-lg-min) {
+ .nav > li {
+ 	padding: 0 25px;
+ }
+}
 
 .navbar {
 	margin-bottom: 0;
@@ -282,9 +305,6 @@ section {
  	margin-top: 0px; 
 }
 
-.solo-menu {
-	background-color: fade(@brown, 50%);
-}
 
 .idiomas > li {
 	list-style: none;
@@ -316,7 +336,6 @@ z-index: 999;
 top: 0;
 width: 80%;
 background-color: fade(@brown, 50%);
-
 }
 
 // ------
@@ -358,10 +377,13 @@ z-index: 9999;
 
 .basoa-btn {
 	background-color: @orange;
-	padding: 5px;
-	border-radius: 50px 0px 0px 50px;
+	padding: 5px 15px;
+	border-radius: 50px 50px;
 	position: relative;
 	left: -100px;
+	-webkit-box-shadow: 3px 4px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    3px 4px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         3px 4px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 .basoa-btn-close {
@@ -371,24 +393,31 @@ z-index: 9999;
 
 .texto-footer {
 	border-radius: 16px 16px;
-	border: 1px solid @brown;
+	border: 1px solid @white;
 	padding: 14px;
 	color: #6a5b4d;
-	font-size: 25px;
-	font-weight: bold;
+	font-size: 22px;
 	margin: 10px 65px;
 	text-align: center;
 	line-height: 1.19em;
-	color: @brown;
+	color: @white;
+	font-family: @roboto;
 }
 
 .logo-footer {
 	text-align: center;
 }
 
-.temporal {
-	height: 1000px;
+.iconos-footer {
+clear: both;
 }
+
+.botones-wrapper {
+margin: 40px 0px;
+width: 100%;
+height: 1px;
+} 
+
 
 
 
