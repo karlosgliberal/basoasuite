@@ -17,10 +17,25 @@ $(document).ready(function() {
     }   
   });
 
-  $('#boton').click(function(e){
+  $('#boton-casas').click(function(e){
     $('.yo').transition({ left: 0 }, 800, 'ease');
+    $('#boton-casas').transition({opacity:0}, 800, 'ease');
+    $('#home').transition({opacity:0}, 2000, 'ease');
     setTimeout(function() {
-    $('#home').remove();
+    $('#boton-volver').transition({opacity:1}, 'ease');
+    $('#boton-volver').removeClass('boton-opacity');
+    $('#boton-casas').addClass('boton-opacity');
+    }, 900);
+  });
+
+  $('#boton-volver').click(function(e){
+    $('#home').transition({opacity:1});
+    $('.yo').transition({ left: '80%' }, 800, 'ease');
+    $('#boton-volver').transition({opacity:0}, 800, 'ease');
+    setTimeout(function() {
+      $('#boton-casas').transition({opacity:1}, 'ease');
+      $('#boton-casas').removeClass('boton-opacity');
+      $('#boton-volver').addClass('boton-opacity');
     }, 900);
   });
 
