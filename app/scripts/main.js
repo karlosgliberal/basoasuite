@@ -46,7 +46,7 @@ $(document).ready(function() {
      //$(this).removeClass('active');
     });
     $('#'+e.target.id+'-carrusel-wrapper').transition({opacity:1, delay:50});
-    $('#'+e.target.id+'-carrusel-wrapper').addClass('active');
+    $('#'+e.target.id+'-carrusel-wrapper').addClass('active-casas');
   });
 
 });
