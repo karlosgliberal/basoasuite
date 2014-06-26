@@ -204,7 +204,7 @@ section {
 }
 
 // ------
-// MENU
+// MENUS
 // ------
 
 .navbar {
@@ -266,7 +266,13 @@ section {
 	opacity: 0.8;
 }
 
+.menu-principal {
+position: fixed;
+z-index: 999;
+top: 0;
+width: 80%;
 
+}
 
 // ------
 // SLIDE
@@ -278,10 +284,6 @@ section {
     -moz-transition: 0.3s ease-in-out left;
     -o-transition: 0.3s ease-in-out left;
     transition: 0.3s ease-in-out left;
-}
-
-.efara {
-	width: 100%;
 }
 
 .puntal {
@@ -299,6 +301,15 @@ section {
 // -----
 // FOOTER LATERAL
 // -----
+
+.basoa-menu {
+width: 20%;
+top: 0;
+bottom: 0;
+position: absolute;
+background-color: @green;
+z-index: 9999;
+}
 
 .basoa-btn {
 	background-color: @orange;
@@ -329,13 +340,5 @@ section {
 	height: 1000px;
 }
 
-// NUEVO MENU LATERAL
 
-.basoa-menu {
-width: 20%;
-top: 0;
-bottom: 0;
-position: absolute;
-background-color: @green;
-z-index: 9999;
-}
+

@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     
+    <link rel="stylesheet" href="bower_components/fullpage.js/jquery.fullPage.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -20,141 +21,210 @@
     <script type="text/javascript" src="//use.typekit.net/mrt0ocm.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
+
+
 <body>
+<!-- Home de Casas -->
+<div class="yo">
+  <!-- Menu lateral Basoa -->
+ <div class="basoa-menu">
+    <div class="logo-footer">
+      <img src="images/logo.png" alt="Basoa suites">
+    </div>
 
+    <div class=" mt10 texto-footer uppercase">
+      ¿Una suite en lo alto de un árbol?
+    </div>
 
-<!-- experimento -->
-<div class="efara">
-<div id="mybasoaSlide" class="basoaSlide slide">
-  <div class="basoaSlide-inner">
-    <div class="active item">
-      <div class="fill">
-        <div class="" id="wrapper">
-          <section id="principal" class="seccion principal">
-              <div class="menus">
-                <div class="col-md-9 solo-menu">
-                 <!--  Menu principal -->
-                  <nav class="navbar navbar-default" role="navigation">
-                    <div class="container-fluid">
-                      <!-- Brand and toggle get grouped for better mobile display -->
-                      <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
-                        <!-- <a class="navbar-brand" href="#">Brand</a> -->
-                      </div>
+     <div class="mt10">
+      <a class="rounded uppercase" href="">Reservar</a>
+    </div>
 
-                      <!-- Collect the nav links, forms, and other content for toggling -->
-                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                          <li>
-                            <ul class="idiomas">
-                              <li><a href="/">ESP</a></li>
-                              <li><a href="/">EUS</a></li>
-                              <li><a href="/">ENG</a></li>
-                              <li><a href="/">FR</a></li>
-                            </ul>
-                          </li>
-                          <li class="active"><a href="#">Inicio</a></li>
-                          <li><a href="#">Te proponemos</a></li>
-                          <li><a href="#">Te ofrecemos</a></li>
-                          <li><a href="#">El bosque</a></li>
-                          <li><a href="#">El entorno</a></li>
-                          <li><a href="#">Nosotros</a></li>
-                          <li><a href="#">Compromisos</a></li>
-                        </ul>
-                      </div><!-- /.navbar-collapse -->
-                    </div><!-- /.container-fluid -->
-                  </nav>
-                 <!--  Fin de menu principal -->
-                </div>
-               <div class="col-md-3 footer-lateral">
-                <div class="logo-footer">
-                  <img src="images/logo.png" alt="Basoa suites">
-                </div>
-                <div class=" mt10 texto-footer uppercase">
-                  ¿Una suite en lo alto de un árbol?
-                </div>
-                <div class="mt10">
-                  <a class="rounded uppercase" href="">Reservar</a>
-                </div>
-               <div class="mt20">
-                 <a class="basoa-btn basoaSlide-control right uppercase" href="#mybasoaSlide" data-slide="next">Ver las suites</a>
-               </div>
-                <div class="iconos-footer">
-                  <ul class="localizacion">
-                    <li class="telefono">+34 695040079</li>
-                    <li class="mail">info@basoasuites.com</li>
-                    <li class="geo">Lizaso, Navarra</li>
-                  </ul>
+     <div class="mt20">
+      <a id="boton" class="basoa-btn basoaSlide-control right uppercase" href="#">Ver las suites</a>   
+    </div>
+     <div class="iconos-footer">
+        <ul class="localizacion">
+          <li class="telefono">+34 695040079</li>
+          <li class="mail">info@basoasuites.com</li>
+          <li class="geo">Lizaso, Navarra</li>
+        </ul>
+      </div>
+  </div>
+   <!-- Fin de Menu lateral Basoa -->
+  <div class="home-casas-content">
+    <!-- Empieza Menu de Casas -->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>
+            <ul class="idiomas">
+              <li><a href="/">ESP</a></li>
+              <li><a href="/">EUS</a></li>
+              <li><a href="/">ENG</a></li>
+              <li><a href="/">FR</a></li>
+            </ul>
+            </li>
+            <li class="active"><a href="#">Inicio</a></li>
+            <li><a id="belea" href="#belea" class="casas">Belea</a></li>
+            <li><a id="beigorri" href="#beigorri" class="casas">Beigorri</a></li>
+            <li><a href="#">El bosque</a></li>
+            <li><a href="#">El entorno</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Compromisos</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- Fin de Menu de casas -->
+    <!-- Empieza Carrusel de Belea -->
+    <div id="belea-carrusel" class="belea home-casas-wrapper carrusel-off active">
+      <div class="container fill">
+        <div id="myCarousel" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="active item">
+             <div class="fill" style="background-image:url('//placehold.it/1024x700');">
+                <div class="container anchogordo">
+                  <h1>uno belea</h1>
                 </div>
               </div>
-             </div>
-              <h2>Soy un sectionnnnn 1111</h2>
-          </section>
-          <section id="dos" class="seccion dos">
-            <h2>Soy un sectionnnnn 22222 principal</h2>
-          </section>
-           <section class="puntal-dos">
-            <h3>Soy un sectionnnnn 2222</h3>
-          </section>
-           <section class="puntal-dos">
-            <h3>Soy un sectionnnnn 2222</h3>
-          </section>
-           <section class="puntal-dos">
-            <h3>Soy un sectionnnnn 2222</h3>
-          </section>
-
+            </div>
+            <div class="item">
+              <div class="fill" style="background-image:url('//placehold.it/1024x700/449955/FFF');">
+                <div class="container anchogordo">
+                  <h1>dos belea</h1>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="fill" style="background-image:url('//placehold.it/1024x700/CC1111/FFF');">
+                <div class="container anchogordo">
+                  <h1>tres belea</h1>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pull-center">
+          <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+          <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+          </div>
         </div>
       </div>
     </div>
-    <!--  Empieza home de casas -->
-      <div class="item">
-        <div id="home-casas">
-         <section id="dos" class="seccion dos">
-            <!-- empieza menu y footer lateral casas -->
-             <div class="menus-interior">
-               <div class="col-md-3">
-                  <div class="footer-lateral">
-                    <a class="basoaslide-control left" href="#mybasoaslide" data-slide="prev">‹</a>
-                  </div>
-               </div>
-                <div class="col-md-9 solo-menu">
-                    aqui menu
+    <!-- Fin de carrusel de Belea -->
+
+    <!--Comienza Carusel de Beigorri -->
+    <div id="beigorri-carrusel" class="beigorri home-casas-wrapper carrusel-off">
+      <div class="container fill">
+        <div id="myCarousel" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="active item">
+              <div class="fill">
+                <div class="container anchogordo">
+                  <h1>uno beigorri</h1>
                 </div>
-             </div>
-             <!-- fin de menu y footer lateral casas -->
-              <h2>soy un sectionnnnn 22222</h2>
-          </section>
-          <!--empieza seccion -->
-          <section class="puntal">
-            <h3>soy un sectionnnnn</h3>
-          </section>
-          <!--empieza seccion -->
-          <section class="puntal">
-            <h3>soy un sectionnnnn</h3>
-          </section>
-          <!--empieza seccion -->
-          <section class="puntal">
-            <h3>soy un sectionnnnn</h3>
-          </section>
-           <!--empieza seccion -->
-          <section class="puntal">
-            <h3>soy un sectionnnnn</h3>
-          </section>
+              </div>
+            </div>
+            <div class="item">
+              <div class="fill" style="background-image:url('//placehold.it/1024x700');">
+                <div class="container anchogordo">
+                  <h1>dos beigorri</h1>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="fill" style="background-image:url('//placehold.it/1024x700/CC1111/FFF');">
+                <div class="container anchogordo">
+                  <h1>tres beigorri</h1>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pull-center">
+          <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+          <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Fin de home de casas -->
-  </div>
+    <!--Fin de Carrusel de Beigorri -->
  </div>
 </div>
-<!-- Fin de experimento -->
-<footer class="">
+<!-- Fin de Home de Casas -->
+<!-- Empieza Home principal -->
+<div id="home" class="home">
+  <!-- Menu principal -->
+    <div class="menu-principal">
+      <nav id="menu-principal" class="navbar navbar-default" role="navigation">
+       <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="navbar-brand" href="#">Brand</a> -->
+          </div>
+             <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                   <li>
+                     <ul class="idiomas">
+                       <li><a href="/">ESP</a></li>
+                       <li><a href="/">EUS</a></li>
+                       <li><a href="/">ENG</a></li>
+                       <li><a href="/">FR</a></li>
+                      </ul>
+                    </li>
+                    <li class="active"><a href="#">Inicio</a></li>
+                    <li><a href="#">Te proponemos</a></li>
+                    <li><a href="#">Te ofrecemos</a></li>
+                    <li><a href="#">El bosque</a></li>
+                    <li><a href="#">El entorno</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Compromisos</a></li>
+                    </ul>
+                  </div>
+                </div>
+        </nav>
+    </div>
+     <!--  Fin de menu principal -->
+  <!--    Secciones Home principal   -->
+  <div class="section seccion principal " id="section0">
+    <div class="intro">
+      <h1>Home Primera</h1>
+    </div>
+  </div>
 
-</footer>
+  <div class="section seccion principal" id="section1">
+    <div class="intro">
+      <h1>Otra sección</h1>
+    </div>
+  </div>
+
+  <div class="section dos" id="section2">
+    <h1>fin</h1>
+  </div>
+
+</div>
+<!-- Fin de Home principal -->
+
+
+
+
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -173,8 +243,10 @@
         <script src="bower_components/jquery.easing/js/jquery.easing.js"></script>
         <script src="bower_components/page/index.js"></script>
         <script src="bower_components/jquery-waypoints/waypoints.js"></script>
-        <script src="bower_components/iscroll/build/iscroll.js"></script>
+        <script src="bower_components/jquery.slimscroll/jquery.slimscroll.js"></script>
+        <script src="bower_components/fullpage.js/jquery.fullPage.js"></script>
         <script src="scripts/basoaSlide.js"></script>
+        <script src="scripts/main.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/vendor/bootstrap.js -->
