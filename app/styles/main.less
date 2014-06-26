@@ -452,18 +452,29 @@ z-index: 9999;
 .titular-casas {
 	text-transform: uppercase;
 	color: @brown;
-	font-size: 18px;
+	font-size: 30px;
 	border-bottom: 1px solid @brown;
+	font-weight: bold;
+	font-family: @calibold;
 }
 
 .texto-casas-wrapper {
 	background-color: fade(@white, 90%);
-	padding: 20px;
-	width: 40%;
+	padding: 5px;
 }
 
 .texto-casas {
 	color: @brown;
 	font-size: 15px;
+}
+
+.texto-casas-container {
+  width: 40%;
+  height: 40%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  border: 1px dotted purple;
 }
 
