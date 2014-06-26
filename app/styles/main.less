@@ -3,6 +3,24 @@
 @icon-font-path: "../bower_components/bootstrap/dist/fonts/";
 
 // -----
+// FUENTES
+// -----
+
+@font-face {
+    font-family: 'calibriregular';
+    src: url('../fonts/calibri-webfont.eot');
+    src: url('../fonts/calibri-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/calibri-webfont.woff') format('woff'),
+         url('../fonts/calibri-webfont.ttf') format('truetype'),
+         url('../fonts/calibri-webfont.svg#calibriregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+// -----
 // COLORES
 // -----
 @green: #B4C9C1;
@@ -15,8 +33,14 @@
 
 // Tipografías
 @roboto: "Roboto", sans-serif; ;
-@myriad: "myriad-pro",sans-serif ;
+@cali: "calibriregular";
 
+.cali {
+	font-family: @cali;
+	font-size: 15px;
+	color: @white;
+	text-align: center;
+}
 
 //Generales
 body {
@@ -156,6 +180,9 @@ text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
 // -----
 // SECCIONES
 // -----
+
+
+
 .presentacion {
 	background-image: url("../images/uno.jpg");
 	height: 700px;
@@ -271,6 +298,7 @@ position: fixed;
 z-index: 999;
 top: 0;
 width: 80%;
+background-color: fade(@brown, 50%);
 
 }
 
