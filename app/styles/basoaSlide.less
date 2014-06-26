@@ -122,28 +122,13 @@
   }
 }
 
-h1 {
-  color:@white;
-  text-align: center;
-}
 
 //Efecto home
 .transicion{
   transition: 0.8s ease-in-out all ;
-  // transform: translate3d(-1438px, 0px, 0px);
   left: 0 !important;
 }
 
-
-
-.home-casas {
-position: fixed;
-left: 80%;
-width: 100%;
-bottom: 0;
-top: 0;
-z-index: 99;
-}
 
 .carousel,.item,.active{height:100%;}
 .carousel-inner{height:100%;}
@@ -167,8 +152,9 @@ z-index: 99;
 
 .home-casas-wrapper{
   position: absolute;
-  top:100px;
+  top:0px;
   width: 100%;
+  z-index: -222222222;
 }
 
 .home-casa-frente{
@@ -176,21 +162,20 @@ z-index: 99;
 }
 
 .belea{
-  border: 3px dotted white;
 }
 
 .beigorri{
-  border: 3px dotted white;
   z-index: -99999;
 }
 
-.anchogordo{
-  height: 500px;
+.container-total {
+  width: 100%;
 }
 
 .container-fluid {
   width: 100%;
 }
+
 .carrusel-off {
   display: none;
 }
@@ -203,6 +188,14 @@ z-index: 99;
    -o-transition: display .5s ease;
 }
 
+
+
+.carousel {
+width: 80%;
+}
+
+
+
 // NUEVO MENU LATERAL
 .basoa-menu {
 width: 20%;
@@ -214,11 +207,10 @@ z-index: 9999;
 float: left;
 }
 
-
 //botones del footer lateral
 .home-casas-content {
   margin-left: 20%;
-  width: 80%;
+  width: 100%;
 }
 
 .boton-opacity{

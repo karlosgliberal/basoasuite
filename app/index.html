@@ -54,69 +54,72 @@
    <!-- Fin de Menu lateral Basoa -->
   <div class="home-casas-content">
     <!-- Empieza Menu de Casas -->
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li>
-            <ul class="idiomas">
-              <li><a href="/">ESP</a></li>
-              <li><a href="/">EUS</a></li>
-              <li><a href="/">ENG</a></li>
-              <li><a href="/">FR</a></li>
+    <div class="menu-casas">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <ul class="idiomas">
+                <li><a href="/">ESP</a></li>
+                <li><a href="/">EUS</a></li>
+                <li><a href="/">ENG</a></li>
+                <li><a href="/">FR</a></li>
+              </ul>
+              </li>
+              <li><a id="belea" href="#belea" class="casas">Belea</a></li>
+              <li><a id="beigorri" href="#beigorri" class="casas">Beigorri</a></li>
+              <li><a href="#">Okolin</a></li>
+              <li><a href="#">Bedats</a></li>
+              <li><a href="#">Recepción</a></li>
             </ul>
-            </li>
-            <li class="active"><a href="#">Inicio</a></li>
-            <li><a id="belea" href="#belea" class="casas">Belea</a></li>
-            <li><a id="beigorri" href="#beigorri" class="casas">Beigorri</a></li>
-            <li><a href="#">El bosque</a></li>
-            <li><a href="#">El entorno</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Compromisos</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div>
     <!-- Fin de Menu de casas -->
     <!-- Empieza Carrusel de Belea -->
-    <div id="belea-carrusel" class="belea home-casas-wrapper carrusel-off active">
-      <div class="container fill">
-        <div id="myCarousel" class="carousel slide">
+    <div id="belea-carrusel-wrapper" class="belea home-casas-wrapper carrusel-off active">
+      <div class="fill">
+        <div id="belea-carrusel" class="carousel slide">
           <div class="carousel-inner">
             <div class="active item">
-             <div class="fill" style="background-image:url('//placehold.it/1024x700');">
-                <div class="container anchogordo">
-                  <h1>uno belea</h1>
+             <div class="fill" style="background-image: url('../images/prueba1.jpg');">
+                <div class="">
+                  <p>uno belea</p>
+                  <p class="mt20 white">
+                    Integer a est vitae tellus pretium condimentum in et velit. Etiam at dui nibh. Fusce tempor mollis eros a vehicula. Proin id tempor dui. Ut ullamcorper vitae mauris vitae faucibus. Maecenas molestie ultricies nulla nec auctor. Pellentesque eget sapien odio. Vestibulum pellentesque, augue sit amet condimentum elementum, nisi sem hendrerit elit, quis volutpat sem lorem sed ligula. Mauris vel accumsan est, in faucibus ipsum. Vestibulum eu elit consequat, tincidunt magna vel, pharetra dui.
+                  </p>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="fill" style="background-image:url('//placehold.it/1024x700/449955/FFF');">
-                <div class="container anchogordo">
-                  <h1>dos belea</h1>
+                <div class="">
+                  <p>dos belea</p>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="fill" style="background-image:url('//placehold.it/1024x700/CC1111/FFF');">
-                <div class="container anchogordo">
-                  <h1>tres belea</h1>
+                <div class="">
+                  <p>tres belea</p>
                   
                 </div>
               </div>
             </div>
           </div>
           <div class="pull-center">
-          <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
-          <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+          <a class="carousel-control left" href="#belea-carrusel" data-slide="prev">‹</a>
+          <a class="carousel-control right" href="#belea-carrusel" data-slide="next">›</a>
           </div>
         </div>
       </div>
@@ -124,35 +127,34 @@
     <!-- Fin de carrusel de Belea -->
 
     <!--Comienza Carusel de Beigorri -->
-    <div id="beigorri-carrusel" class="beigorri home-casas-wrapper carrusel-off">
+    <div id="beigorri-carrusel-wrapper" class="beigorri home-casas-wrapper carrusel-off">
       <div class="container fill">
-        <div id="myCarousel" class="carousel slide">
+        <div id="beigorri-carrusel" class="carousel slide">
           <div class="carousel-inner">
             <div class="active item">
               <div class="fill">
                 <div class="container anchogordo">
-                  <h1>uno beigorri</h1>
+                  <p>uno beigorri</p>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="fill" style="background-image:url('//placehold.it/1024x700');">
                 <div class="container anchogordo">
-                  <h1>dos beigorri</h1>
+                  <p>dos beigorri</p>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="fill" style="background-image:url('//placehold.it/1024x700/CC1111/FFF');">
                 <div class="container anchogordo">
-                  <h1>tres beigorri</h1>
-                  
+                  <p>tres beigorri</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="pull-center">
-          <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+          <a class="carousel-control left" href="#beigorri-carrusel" data-slide="prev">‹</a>
           <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
           </div>
         </div>
