@@ -32,7 +32,7 @@ $(document).ready(function() {
      $(this).removeClass('active');
     });
     $('#'+e.target.id+'-carrusel').addClass('active'); 
-    console.log('name');
+    console.log();
   });
 
 });
