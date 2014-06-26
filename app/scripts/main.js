@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+  $('.carousel').carousel();
   $('.home').fullpage({
     anchors: ['firstPage', 'secondPage', '3rdPage'],
     resize: false,
@@ -44,8 +44,7 @@ $(document).ready(function() {
     $('.carrusel-off').each(function(index){
      $(this).removeClass('active');
     });
-    $('#'+e.target.id+'-carrusel-wrapper').addClass('active'); 
-    console.log();
+    $('#'+e.target.id+'-carrusel-wrapper').addClass('active');
   });
 
 });
