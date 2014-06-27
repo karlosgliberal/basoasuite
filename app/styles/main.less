@@ -252,6 +252,12 @@ text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
 // SECCIONES
 // -----
 
+
+.section {
+	background-size: cover;
+	background-position: center;
+}
+
 .section.table, .slide.table {
 margin: 0;
 width: 80%;
@@ -259,33 +265,32 @@ width: 80%;
 
 .presentacion {
 	background-image: url("../images/uno.jpg");
-	background-size: cover;
-	background-position: center;
+
 }
 
 
 .principal {
 	background-image: url("../images/prueba1.jpg");
-	background-size: cover;
-	background-position: center;
+
 }
 
 .proponemos {
 	background-image: url("../images/prueba2.jpg");
-	background-size: cover;
-	background-position: center;
+
+}
+
+.bosque {
+	background-image: url("../images/prueba2.jpg");
 }
 
 .dos {
 	background-image: url("../images/dos.jpg");
-	background-size: cover;
-	background-position: center;
+
 }
 
 .ofrecemos {
 	background-image: url("../images/prueba3.jpg");
-	background-size: cover;
-	background-position: center;
+
 }
 
 
@@ -311,8 +316,7 @@ width: 80%;
 
 .texto-home-wrapper {
 	color: @white;
-	background: fade(@brown, 50%);
-	margin: 0px 40% 0px 20%;
+	background: fade(@brown, 70%);
 }
 
 .floritura {
@@ -322,6 +326,11 @@ width: 80%;
 
 .floritura-rotate {
  transform: rotate(180deg);
+}
+
+.floritura-mini {
+width: 6%;
+margin: 15px 0px 17px 0px;
 }
 
 .nosotros {
@@ -338,6 +347,30 @@ width: 80%;
 	margin: 0;
 	padding: 0;
 }
+
+.texto-home-container {
+width: 45%;
+height: 45%;
+margin: auto;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+// border: 1px solid red;
+}
+
+.proponemos-container {
+	height: 20%;
+}
+
+.texto-secciones {
+	font-size: 17px;
+	padding: 0 15px 25px;
+}
+
+
+
 
 // ------
 // MENUS
