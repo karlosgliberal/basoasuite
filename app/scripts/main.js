@@ -42,22 +42,13 @@ $(document).ready(function() {
   $('.casas').click(function(e){
     e.preventDefault();
     $('.carrusel-off').each(function(index){
-     // $(this).transition({opacity:0, dalay:50});
-     $(this).removeClass('active');
+     $(this).transition({opacity:0, dalay:50});
+     //$(this).removeClass('active');
     });
-    // $('#'+e.target.id+'-carrusel-wrapper').transition({opacity:1, delay:50});
+    $('#'+e.target.id+'-carrusel-wrapper').transition({opacity:1, delay:50});
     $('#'+e.target.id+'-carrusel-wrapper').addClass('active');
   });
 
 });
-
-  // $('#segunda').fullpage({
-  //   anchors: ['dosuno', 'dosdos', 'dostres'],
-  //   slidesColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
-  //   css3: true ,
-  //   slidesNavigation: true,
-  //   autoScrolling: false     
-  // });
-
 
 
