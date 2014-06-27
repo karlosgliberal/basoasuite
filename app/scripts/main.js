@@ -1,5 +1,14 @@
 $(document).ready(function() {
+  //Sistema de Carrusel
   $('#belea-carrusel, #beigorri-carrusel, #okolin-carrusel, #bedats-carrusel, #recepcion-carrusel').carousel({interval:false});
+  $('#controles a').click(function(e){
+    var id = e.target.id;
+    var arrayIdGeneral = id.split("-");
+    var idIzquierda = '#'+arrayIdGeneral[0]+'-izquierda';
+    $(idIzquierda).show();
+  });
+
+  //Sistema de onepage de portada con el modulo Fullpaje.js
   $('.home').fullpage({
     anchors: ['firstPage', 'secondPage', '3rdPage'],
     resize: false,
@@ -17,6 +26,8 @@ $(document).ready(function() {
     }   
   });
 
+  //Sistema para el footer lateral
+  //Ir a casas
   $('#boton-casas').click(function(e){
     $('.home-casas').transition({ left: 0 }, 800, 'ease');
     $('#boton-casas').transition({opacity:0}, 800, 'ease');
@@ -28,6 +39,7 @@ $(document).ready(function() {
     }, 900);
   });
 
+  //Volver a casas
   $('#boton-volver').click(function(e){
     $('#home').transition({opacity:1});
     $('.home-casas').transition({ left: '80%' }, 800, 'ease');
@@ -39,6 +51,7 @@ $(document).ready(function() {
     }, 900);
   });
 
+  //Acceso a las casas mediante el menú
   $('.casas').click(function(e){
     e.preventDefault();
     $('.carrusel-off').each(function(index){
