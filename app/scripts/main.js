@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.carousel').carousel({interval:false});
+  $('#belea-carrusel, #beigorri-carrusel, #okolin-carrusel, #bedats-carrusel, #recepcion-carrusel').carousel({interval:false});
   $('.home').fullpage({
     anchors: ['firstPage', 'secondPage', '3rdPage'],
     resize: false,
@@ -43,7 +43,7 @@ $(document).ready(function() {
     e.preventDefault();
     $('.carrusel-off').each(function(index){
      $(this).transition({opacity:0, dalay:50});
-     //$(this).removeClass('active');
+     $(this).removeClass('active');
     });
     $('#'+e.target.id+'-carrusel-wrapper').transition({opacity:1, delay:50});
     $('#'+e.target.id+'-carrusel-wrapper').addClass('active');
