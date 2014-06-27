@@ -1,7 +1,7 @@
 $(document).ready(function() {
   //Sistema de Carrusel
   $('#belea-carrusel, #beigorri-carrusel, #okolin-carrusel, #bedats-carrusel, #recepcion-carrusel').carousel({interval:false});
-  $('#controles a').click(function(e){
+  $('.controles a').click(function(e){
     var id = e.target.id;
     var arrayIdGeneral = id.split("-");
     var idIzquierda = '#'+arrayIdGeneral[0]+'-izquierda';
