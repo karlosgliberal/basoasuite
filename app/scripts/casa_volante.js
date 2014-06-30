@@ -1,7 +1,6 @@
-(function() {
-
+$(document).ready(function(){
     // Matter aliases
-    var Engine = Matter.Engine,
+ var Engine = Matter.Engine,
         World = Matter.World,
         Bodies = Matter.Bodies,
         Body = Matter.Body,
@@ -28,8 +27,8 @@
 
         // some example engine options
         var options = {
-            positionIterations: 6,
-            velocityIterations: 4,
+            positionIterations: 0,
+            velocityIterations: 0,
             enableSleeping: false
         };
 
@@ -52,6 +51,10 @@
             _sceneName = window.location.hash.replace('#', '').replace('-inspect', '');
         // set up a scene with bodies
         Demo[_sceneName]();
+        $('#boton-casas').click(function(e){
+              console.log('name');
+          Demo[_sceneName]();
+        })
     };
 
     // call init when the page has loaded fully
@@ -73,10 +76,10 @@
 
       var texture = 'images/1.png';
       var ropeB = Composites.stack(60, 0, 4, 4, 60, 60, function(x, y, column, row) {
-        return Bodies.rectangle(x, y, 10, 10, { groupId: groupId, render: { fillStyle: '#b4c9c1', strokeStyle: '#b4c9c1' } });
+        return Bodies.rectangle(x, y, 10, 10, { groupId: groupId, frictionAir:0.009, render: { fillStyle: '#b4c9c1', strokeStyle: '#b4c9c1' } });
       });
       
-      Composites.chain(ropeB, 0, 0, 0, 0, { stiffness: 0.4, length: 4 });
+      Composites.chain(ropeB, 0, 0, 0, 0, { stiffness: 0.4, length: 4});
 
       ropeB.bodies[15]['render']['sprite']['texture'] = texture; 
 
@@ -124,7 +127,7 @@
       Mouse.setScale(_mouseConstraint.mouse, { x: 1, y: 1 });
       Mouse.setOffset(_mouseConstraint.mouse, { x: 0, y: 0 });
 
-      _engine.enableSleeping = false;
+      _engine.enableSleeping = true;
       _engine.world.gravity.y = 1;
       _engine.world.gravity.x = 0;
       _engine.timing.timeScale = 1;
@@ -152,7 +155,8 @@
       renderOptions.background = '#b4c9c1';
 
       if (_isMobile)
-          renderOptions.showDebug = true;
+          renderOptions.showDebug =false ;
     };
+  
 
-})();
+});
