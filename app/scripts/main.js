@@ -10,7 +10,7 @@ $(document).ready(function() {
 
   //Sistema de onepage de portada con el modulo Fullpaje.js
   $('.home').fullpage({
-    anchors: ['firstPage', 'secondPage', '3rdPage'],
+    anchors: ['inicio', 'te-proponemos', 'te-ofrecemos', 'el-bosque', 'donde-estamos', 'nosotros', 'compromisos'],
     resize: false,
     slidesColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
     // css3: true ,
