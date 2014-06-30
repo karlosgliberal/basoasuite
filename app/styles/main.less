@@ -527,8 +527,9 @@ z-index: 9999;
 }
 
 .basoa-btn-close {
-	position: relative;
-	left: 16%;
+	position: absolute;
+	left: 80%;
+	width: 35%;
 }
 
 .texto-footer {
@@ -550,7 +551,6 @@ z-index: 9999;
 
 .iconos-footer {
  clear: both;
- margin-bottom: 90px;
 }
 
 .botones-wrapper {
@@ -580,13 +580,21 @@ z-index: 9999;
 }
 
 .localizacion {
-	padding-left: 51px;
+	text-align: center;
+	padding: 0;
 }
 
 .localizacion > li {
-	display: inline;
-	float: left;
+	display: inline-block;
 	padding: 10px;
+}
+
+.localizacion > li a:hover {
+	opacity: 0.7;
+	-webkit-transition: all 200ms ease-in;
+	-o-transition: all 200ms ease-in;
+	-moz-transition: all 200ms ease-in;
+	transition: all 200ms ease-in;
 }
 
 .texto-footer-final {
@@ -595,10 +603,21 @@ z-index: 9999;
 	font-weight: bold;
 }
 
-.iconos-footer-item > a:hover {
-	opacity: 0.2;
+.localizacion li a {
+	// -webkit-transition: all 200ms ease-in;
+	// -o-transition: all 200ms ease-in;
+	// -moz-transition: all 200ms ease-in;
+	// transition: all 200ms ease-in;
 }
 
+.botones-wrapper a:hover{
+	background-color: #E05656;
+		-webkit-transition: all 200ms ease-in;
+	-o-transition: all 200ms ease-in;
+	-moz-transition: all 200ms ease-in;
+	transition: all 200ms ease-in;
+
+}
 // ------
 // CASAS
 // ------
@@ -629,7 +648,7 @@ z-index: 9999;
 }
 
 .texto-casas-container {
-  width: 34%;
+  width: 40%;
   height: 35%;
   // overflow: auto;
   margin: auto;
@@ -662,6 +681,5 @@ z-index: 9999;
 .home-casas {
   background-color: @green;
 }
-
 
 
