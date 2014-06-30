@@ -51,10 +51,6 @@ $(document).ready(function(){
             _sceneName = window.location.hash.replace('#', '').replace('-inspect', '');
         // set up a scene with bodies
         Demo[_sceneName]();
-        $('#boton-casas').click(function(e){
-              console.log('name');
-          Demo[_sceneName]();
-        })
     };
 
     // call init when the page has loaded fully
@@ -76,7 +72,7 @@ $(document).ready(function(){
 
       var texture = 'images/1.png';
       var ropeB = Composites.stack(60, 0, 4, 4, 60, 60, function(x, y, column, row) {
-        return Bodies.rectangle(x, y, 10, 10, { groupId: groupId, frictionAir:0.009, render: { fillStyle: '#b4c9c1', strokeStyle: '#b4c9c1' } });
+        return Bodies.rectangle(x, y, 10, 10, { groupId: groupId, render: { fillStyle: '#b4c9c1', strokeStyle: '#b4c9c1' } });
       });
       
       Composites.chain(ropeB, 0, 0, 0, 0, { stiffness: 0.4, length: 4});
@@ -90,10 +86,22 @@ $(document).ready(function(){
           stiffness: 0.2
         }));
 
-
       World.add(_world, ropeB);
-    };
+        $('#boton-casas').click(function(e){
+              console.log('name');
+          ropeB.bodies[15].positionPrev.x -= 40;
+          ropeB.bodies[15].positionPrev.y += 20;
 
+        })
+    // show user how to fire a rock!
+    // Events.on(_engine, 'tick', function(event) {
+    //   // go for the top pyramid
+    //   if (_engine.timing.timestamp > 4000 && _engine.timing.timestamp < 4500) {
+    //     ropeB.bodies[15].positionPrev.x += 15;
+    //     console.log('movida2');
+    //   }
+    // });
+    };
     
     Demo.reset = function() {
       var _world = _engine.world;

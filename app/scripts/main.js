@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
   var left = '80%';
   if ($(this).width() >= 1280) {
     left = left;
@@ -72,6 +71,15 @@ $(document).ready(function() {
     $('#'+e.target.id+'-carrusel-wrapper').addClass('active');
   });
 
+  $('.menu-casa').click(function(e){
+    $('.menu-casa').removeClass('active-menu');
+    $(this).addClass('active-menu');
+  });
+
+  $('.menu-home').click(function(e){
+    $('.menu-home').removeClass('active');
+    $(this).addClass('active');
+  });
 
 
 });
