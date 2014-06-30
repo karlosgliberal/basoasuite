@@ -99,7 +99,7 @@
       Composite.add(ropeB, Constraint.create({ 
           bodyB: ropeB.bodies[0],
           pointB: { x: 00, y: 0 },
-          pointA: { x: 180, y: 0 },
+          pointA: { x: 85, y: 0 },
           stiffness: 0.2
         }));
 
