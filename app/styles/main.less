@@ -513,6 +513,7 @@ left: -3px;
 	z-index: 999;
 	top: 0;
 	width: 80%;
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {width: 70%; }
 	background-color: fade(@brown, 50%);
 }
 
@@ -537,6 +538,8 @@ left: -3px;
 	font-size: 65px;
 	opacity: 0.9;
 	padding-top: 30%;
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { padding-top: 50%; }
+
 }
 .camera:before {
 	position: relative;
