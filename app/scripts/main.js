@@ -155,6 +155,14 @@ $(document).ready(function() {
           renderOptions.showDebug = true;
     };
 
+  var left = '80%';
+  if ($(this).width() >= 1280) {
+    left = left;
+  }
+  else if ($(this).width() < 1280 && $(this).width()>= 980) {
+    left = '70%';
+  }
+
   //Sistema de Carrusel
   $('#belea-carrusel, #beigorri-carrusel, #okolin-carrusel, #bedats-carrusel, #recepcion-carrusel').carousel({interval:false});
   $('.controles a').click(function(e){
@@ -199,7 +207,7 @@ $(document).ready(function() {
   //Volver a casas
   $('#boton-volver').click(function(e){
     $('#home').transition({opacity:1});
-    $('.home-casas').transition({ left: '80%' }, 800, 'ease');
+    $('.home-casas').transition({ left: left }, 800, 'ease');
     $('#boton-volver').transition({opacity:0}, 800, 'ease');
     setTimeout(function() {
       $('#boton-casas').transition({opacity:1}, 'ease');
