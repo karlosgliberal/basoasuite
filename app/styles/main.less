@@ -246,6 +246,9 @@ text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
 	bottom: 0;
 	top: 0;
 	z-index: 99;
+		@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { 
+			left: 70%; 
+		}
 }
 
 // -----
@@ -261,6 +264,9 @@ text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
 .section.table, .slide.table {
 	margin: 0;
 	width: 81%;
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { 
+			width: 71%;
+		}
 }
 
 .presentacion {
@@ -357,7 +363,7 @@ margin: 15px 0px 17px 0px;
 
 .texto-home-container {
 width: 45%;
-height: 45%;
+height: 25%;
 margin: auto;
 position: absolute;
 top: 0;
@@ -369,6 +375,13 @@ right: 0;
 
 .proponemos-container {
 	height: 20%;
+}
+
+.compromisos-container {
+	height: 45%;
+}
+.compromisos-container {
+	height: 35%;
 }
 
 .texto-secciones {
@@ -418,6 +431,7 @@ left: -3px;
  	padding: 0 10px;
  }
 }
+
 @media (min-width: @screen-lg-min) {
 .home-casas-content  .nav > li {
 	padding: 0 40px;
@@ -464,6 +478,11 @@ left: -3px;
 .menu-casas .navbar-default .navbar-nav > li > a {
 	font-size: 20px;
 }
+
+.menu-principal .navbar-default .navbar-nav > li > a {
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { font-size: 8px; border: 1px solid; }
+}
+
 
 .idiomas > li {
 	list-style: none;
@@ -544,6 +563,8 @@ opacity: 0.8;
 
 .basoa-menu {
 width: 20%;
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+	 width: 30%; }
 top: 0;
 bottom: 0;
 position: absolute;
@@ -589,7 +610,6 @@ z-index: 9999;
 	padding: 14px;
 	color: #6a5b4d;
 	font-size: 22px;
-	// margin: 10px 65px;
 	margin: 10px 19%;
 	text-align: center;
 	line-height: 1.19em;
@@ -724,7 +744,7 @@ z-index: 9999;
 }
 
 .home-casas {
-  background: url("../images/loading.gif") no-repeat 62% 75% @green;
+  background: url("../images/loading.gif") no-repeat 60% 50% @green;
 }
 
 
