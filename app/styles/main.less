@@ -363,6 +363,9 @@ margin: 15px 0px 17px 0px;
 
 .texto-home-container {
 width: 45%;
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { 
+			width: 75%;
+		}
 height: 25%;
 margin: auto;
 position: absolute;
@@ -480,7 +483,7 @@ left: -3px;
 }
 
 .menu-principal .navbar-default .navbar-nav > li > a {
-	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { font-size: 8px; border: 1px solid; }
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { font-size: 8px;}
 }
 
 
@@ -538,7 +541,7 @@ left: -3px;
 	font-size: 65px;
 	opacity: 0.9;
 	padding-top: 30%;
-	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { padding-top: 50%; }
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {padding-top: 50%; }
 
 }
 .camera:before {
@@ -581,6 +584,8 @@ z-index: 9999;
 	border-radius: 50px 50px;
 	position: relative;
 	left: -100px;
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+	 left: -65px; }
 	-webkit-box-shadow: 3px 4px 5px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow:    3px 4px 5px 0px rgba(50, 50, 50, 0.75);
   box-shadow:         3px 4px 5px 0px rgba(50, 50, 50, 0.75);
@@ -717,6 +722,8 @@ z-index: 9999;
 
 .texto-casas-container {
   width: 40%;
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+	  width: 70%; }
   height: 35%;
   // overflow: auto;
   margin: auto;
