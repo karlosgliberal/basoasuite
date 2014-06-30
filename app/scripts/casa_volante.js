@@ -9,27 +9,13 @@
         Composites = Matter.Composites,
         Common = Matter.Common,
         Constraint = Matter.Constraint,
-        RenderPixi = Matter.RenderPixi,
         Events = Matter.Events,
-        Bounds = Matter.Bounds,
-        Vector = Matter.Vector,
-        Vertices = Matter.Vertices,
         MouseConstraint = Matter.MouseConstraint,
-        Mouse = Matter.Mouse,
-        Query = Matter.Query;
-
-    // MatterTools aliases
-    if (window.MatterTools) {
-        var Gui = MatterTools.Gui,
-            Inspector = MatterTools.Inspector;
-    }
+        Mouse = Matter.Mouse;
 
     var Demo = {};
 
     var _engine,
-        _gui,
-        _inspector,
-        _sceneName,
         _mouseConstraint,
         _sceneEvents = [],
         _useInspector = window.location.hash.indexOf('-inspect') !== -1,
@@ -81,23 +67,23 @@
       var _world = _engine.world,
       groupId = Body.nextGroupId();
       Demo.reset();
+      // _world.bounds.max.x = 80;
+      // _world.bounds.max.y = 80
+      groupId = Body.nextGroupId( );        
 
-      groupId = Body.nextGroupId();        
-
-      var texture = '1.png';
-      var ropeB = Composites.stack(500, 100, 4, 4, 60, 60, function(x, y, column, row) {
-        return Bodies.rectangle(x, y, 10, 10, { groupId: groupId, render: { fillStyle: '#000000', strokeStyle: '#000000' } });
+      var texture = 'images/1.png';
+      var ropeB = Composites.stack(60, 0, 4, 4, 60, 60, function(x, y, column, row) {
+        return Bodies.rectangle(x, y, 10, 10, { groupId: groupId, render: { fillStyle: '#b4c9c1', strokeStyle: '#b4c9c1' } });
       });
       
-      Composites.chain(ropeB, 0, 0, 0, 0, { stiffness: 0.4, length: 2 });
+      Composites.chain(ropeB, 0, 0, 0, 0, { stiffness: 0.4, length: 4 });
 
       ropeB.bodies[15]['render']['sprite']['texture'] = texture; 
-      console.log(ropeB.bodies[15]);
 
       Composite.add(ropeB, Constraint.create({ 
           bodyB: ropeB.bodies[0],
-          pointB: { x: 00, y: 0 },
-          pointA: { x: 500, y: 50 },
+          pointB: { x: 0, y: 0 },
+          pointA: { x: 85, y: 0 },
           stiffness: 0.2
         }));
 
@@ -108,7 +94,7 @@
     
     Demo.reset = function() {
       var _world = _engine.world;
-        
+
       World.clear(_world);
       Engine.clear(_engine);
 
@@ -163,7 +149,7 @@
       renderOptions.showAngleIndicator = false;
       renderOptions.showIds = false;
       renderOptions.showShadows = false;
-      renderOptions.background = false;
+      renderOptions.background = '#b4c9c1';
 
       if (_isMobile)
           renderOptions.showDebug = true;
