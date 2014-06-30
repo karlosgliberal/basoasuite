@@ -71,10 +71,14 @@ $(document).ready(function() {
     $('#'+e.target.id+'-carrusel-wrapper').addClass('active');
   });
 
+
+
   $('.menu-casa').click(function(e){
     $('.menu-casa').removeClass('active-menu');
     $(this).addClass('active-menu');
   });
+
+  
 
   $('.menu-home').click(function(e){
     $('.menu-home').removeClass('active');
