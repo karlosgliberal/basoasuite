@@ -152,7 +152,7 @@ $(document).ready(function() {
       renderOptions.background = '#b4c9c1';
 
       if (_isMobile)
-          renderOptions.showDebug = true;
+          renderOptions.showDebug =false ;
     };
 
   var left = '80%';
