@@ -81,15 +81,17 @@
       var _world = _engine.world,
       groupId = Body.nextGroupId();
       Demo.reset();
+      console.log(_world);
+      // _world.bounds.max.x = 80;
+      // _world.bounds.max.y = 80
+      groupId = Body.nextGroupId( );        
 
-      groupId = Body.nextGroupId();        
-
-      var texture = '1.png';
-      var ropeB = Composites.stack(500, 100, 4, 4, 60, 60, function(x, y, column, row) {
-        return Bodies.rectangle(x, y, 10, 10, { groupId: groupId, render: { fillStyle: '#000000', strokeStyle: '#000000' } });
+      var texture = 'images/1.png';
+      var ropeB = Composites.stack(40, 50, 4, 4, 60, 60, function(x, y, column, row) {
+        return Bodies.rectangle(x, y, 10, 10, { groupId: groupId, render: { fillStyle: '#b4c9c1', strokeStyle: '#b4c9c1' } });
       });
       
-      Composites.chain(ropeB, 0, 0, 0, 0, { stiffness: 0.4, length: 2 });
+      Composites.chain(ropeB, 0, 0, 0, 0, { stiffness: 0.4, length: 4 });
 
       ropeB.bodies[15]['render']['sprite']['texture'] = texture; 
       console.log(ropeB.bodies[15]);
@@ -97,7 +99,7 @@
       Composite.add(ropeB, Constraint.create({ 
           bodyB: ropeB.bodies[0],
           pointB: { x: 00, y: 0 },
-          pointA: { x: 500, y: 50 },
+          pointA: { x: 180, y: 0 },
           stiffness: 0.2
         }));
 
@@ -108,7 +110,7 @@
     
     Demo.reset = function() {
       var _world = _engine.world;
-        
+
       World.clear(_world);
       Engine.clear(_engine);
 
@@ -151,6 +153,8 @@
       World.add(_world, _mouseConstraint);
       
       var renderOptions = _engine.render.options;
+      renderOptions.width = 380;
+      renderOptions.height = 100;
       renderOptions.wireframes = false;
       renderOptions.hasBounds = false;
       renderOptions.showDebug = false;
@@ -163,7 +167,7 @@
       renderOptions.showAngleIndicator = false;
       renderOptions.showIds = false;
       renderOptions.showShadows = false;
-      renderOptions.background = false;
+      renderOptions.background = '#b4c9c1';
 
       if (_isMobile)
           renderOptions.showDebug = true;
