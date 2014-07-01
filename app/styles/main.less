@@ -485,11 +485,17 @@ left: -3px;
 
 .menu-casas .navbar-default .navbar-nav > li > a {
 	font-size: 20px;
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { font-size: 15px;;}
 }
 
 .menu-principal .navbar-default .navbar-nav > li > a {
 	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { font-size: 8px;}
 }
+
+.menu-principal .navbar-default .navbar-nav > li > a {
+	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { font-size: 8px; border: 1px solid red; }
+}
+
 
 
 .idiomas > li {
