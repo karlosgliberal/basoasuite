@@ -71,14 +71,15 @@ $(document).ready(function(){
       groupId = Body.nextGroupId( );        
 
       var texture = 'images/1.png';
-      var ropeB = Composites.stack(60, 0, 4, 4, 60, 60, function(x, y, column, row) {
-        return Bodies.rectangle(100, 10, 10, 10, { groupId: groupId, render: { fillStyle: '#b4c9c1', strokeStyle: '#b4c9c1' } });
+      var ropeB = Composites.stack(60, 0, 14, 1, 80, 80, function(x, y, column, row) {
+        return Bodies.rectangle(100, 20, 10, 10, { groupId: groupId, render: { fillStyle: '#b4c9c1', strokeStyle: '#b4c9c1' } });
       });
       
+          console.log(ropeB.bodies.length); 
       Composites.chain(ropeB, 0, 0, 0, 0, { stiffness: 0.4, length: 4});
 
-      ropeB.bodies[15]['render']['sprite']['texture'] = texture; 
-      console.log(ropeB.bodies[15]);
+      ropeB.bodies[13]['render']['sprite']['texture'] = texture; 
+
       Composite.add(ropeB, Constraint.create({ 
           bodyB: ropeB.bodies[0],
           pointB: { x: 0, y: 0 },
@@ -89,8 +90,8 @@ $(document).ready(function(){
       World.add(_world, ropeB);
 
       $('#boton-casas').click(function(e){
-        ropeB.bodies[15].positionPrev.x -= 40;
-        ropeB.bodies[15].positionPrev.y += 20;
+        ropeB.bodies[13].positionPrev.x -= 40;
+        ropeB.bodies[13].positionPrev.y += 20;
       })
     };
     
@@ -134,7 +135,6 @@ $(document).ready(function(){
       World.add(_world, _mouseConstraint);
       
       var renderOptions = _engine.render.options;
-          console.log(renderOptions);
       renderOptions.wireframes = false;
       renderOptions.hasBounds = false;
       renderOptions.showDebug = false;
@@ -149,6 +149,7 @@ $(document).ready(function(){
       renderOptions.showShadows = false;
       renderOptions.showSleeping = false;
       renderOptions.background = '#b4c9c1';
+      // renderOptions.background = '#ffffff';
 
       if (_isMobile)
           renderOptions.showDebug =false ;
