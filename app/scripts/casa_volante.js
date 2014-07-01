@@ -148,6 +148,7 @@ $(document).ready(function(){
       World.add(_world, _mouseConstraint);
       
       var renderOptions = _engine.render.options;
+          console.log(renderOptions);
       renderOptions.wireframes = false;
       renderOptions.hasBounds = false;
       renderOptions.showDebug = false;
@@ -160,6 +161,7 @@ $(document).ready(function(){
       renderOptions.showAngleIndicator = false;
       renderOptions.showIds = false;
       renderOptions.showShadows = false;
+      renderOptions.showSleeping = false;
       renderOptions.background = '#b4c9c1';
 
       if (_isMobile)

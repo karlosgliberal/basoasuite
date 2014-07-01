@@ -72,13 +72,11 @@ $(document).ready(function() {
   });
 
 
-
   $('.menu-casa').click(function(e){
     $('.menu-casa').removeClass('active-menu');
     $(this).addClass('active-menu');
   });
 
-  
 
   $('.menu-home').click(function(e){
     $('.menu-home').removeClass('active');
