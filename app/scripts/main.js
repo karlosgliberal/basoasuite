@@ -1,5 +1,6 @@
-$(document).ready(function() {
 
+$(document).ready(function() {
+  //Sistema de left dinamico para el slide de casas
   var left = '80%';
   if ($(this).width() >= 1280) {
     left = left;
@@ -81,8 +82,6 @@ $(document).ready(function() {
     $('.menu-home').removeClass('active');
     $(this).addClass('active');
   });
-
-
 });
 
 
