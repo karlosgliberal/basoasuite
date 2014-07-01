@@ -38,6 +38,7 @@ $(document).ready(function(){
 
         // add a mouse controlled constraint
         _mouseConstraint = MouseConstraint.create(_engine);
+        console.log(_mouseConstraint);
         World.add(_engine.world, _mouseConstraint);
 
         // run the engine
@@ -72,7 +73,7 @@ $(document).ready(function(){
 
       var texture = 'images/1.png';
       var ropeB = Composites.stack(60, 0, 4, 4, 60, 60, function(x, y, column, row) {
-        return Bodies.rectangle(x, y, 10, 10, { groupId: groupId, render: { fillStyle: '#b4c9c1', strokeStyle: '#b4c9c1' } });
+        return Bodies.rectangle(100, 10, 10, 10, { groupId: groupId, render: { fillStyle: '#b4c9c1', strokeStyle: '#b4c9c1' } });
       });
       
       Composites.chain(ropeB, 0, 0, 0, 0, { stiffness: 0.4, length: 4});
@@ -87,20 +88,11 @@ $(document).ready(function(){
         }));
 
       World.add(_world, ropeB);
-        $('#boton-casas').click(function(e){
-              console.log('name');
-          ropeB.bodies[15].positionPrev.x -= 40;
-          ropeB.bodies[15].positionPrev.y += 20;
 
-        })
-    // show user how to fire a rock!
-    // Events.on(_engine, 'tick', function(event) {
-    //   // go for the top pyramid
-    //   if (_engine.timing.timestamp > 4000 && _engine.timing.timestamp < 4500) {
-    //     ropeB.bodies[15].positionPrev.x += 15;
-    //     console.log('movida2');
-    //   }
-    // });
+      $('#boton-casas').click(function(e){
+        ropeB.bodies[15].positionPrev.x -= 40;
+        ropeB.bodies[15].positionPrev.y += 20;
+      })
     };
     
     Demo.reset = function() {
@@ -131,18 +123,13 @@ $(document).ready(function(){
       // reset random seed
       Common._seed = 0;
 
-      // reset mouse offset and scale (only required for Demo.views)
-      Mouse.setScale(_mouseConstraint.mouse, { x: 1, y: 1 });
-      Mouse.setOffset(_mouseConstraint.mouse, { x: 0, y: 0 });
-
       _engine.enableSleeping = true;
       _engine.world.gravity.y = 1;
       _engine.world.gravity.x = 0;
       _engine.timing.timeScale = 1;
 
       var offset = 5;
-      World.add(_world, [
-      ]);
+      World.add(_world, []);
 
       _mouseConstraint = MouseConstraint.create(_engine);
       World.add(_world, _mouseConstraint);
