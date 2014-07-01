@@ -304,8 +304,8 @@ text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
 
 .title-seccion-home {
 	text-transform: uppercase;
-	padding: 15px 0px 0px 15px;
 	font-weight: bold;
+	font-size: 18px;
 }
 
 .footer-lateral {
@@ -331,6 +331,7 @@ text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
 .texto-home-wrapper {
 	color: @white;
 	background: fade(@brown, 70%);
+	padding: 15px;
 }
 
 .floritura {
@@ -389,7 +390,6 @@ right: 0;
 
 .texto-secciones {
 	font-size: 17px;
-	padding: 0 15px 25px;
 }
 
 .mapa {
@@ -441,11 +441,9 @@ left: -3px;
  }
 }
 
-
 .navbar {
 	margin-bottom: 0;
-	font-family: @calibold;
-
+  font-family: @calibold;
 }
 
 .navbar-default {
@@ -604,9 +602,9 @@ z-index: 9999;
 	left: -100px;
 	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
 	 left: -65px; }
-	-webkit-box-shadow: 3px 4px 5px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    3px 4px 5px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:         3px 4px 5px 0px rgba(50, 50, 50, 0.75);
+	// -webkit-box-shadow: 3px 4px 5px 0px rgba(50, 50, 50, 0.75);
+ //  -moz-box-shadow:    3px 4px 5px 0px rgba(50, 50, 50, 0.75);
+ //  box-shadow:         3px 4px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 .basoa-btn-close:before {
@@ -628,7 +626,6 @@ z-index: 9999;
 .basoa-btn-close {
 	position: absolute;
 	left: 80%;
-	background-color: @brown;
 }
 
 .texto-footer {
@@ -742,9 +739,8 @@ z-index: 9999;
 .texto-casas-container {
   width: 40%;
   @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-	  width: 70%; }
+	width: 70%; }
   height: 35%;
-  // overflow: auto;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
