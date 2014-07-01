@@ -38,7 +38,6 @@ $(document).ready(function(){
 
         // add a mouse controlled constraint
         _mouseConstraint = MouseConstraint.create(_engine);
-        console.log(_mouseConstraint);
         World.add(_engine.world, _mouseConstraint);
 
         // run the engine

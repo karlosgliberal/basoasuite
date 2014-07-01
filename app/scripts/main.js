@@ -19,15 +19,14 @@ $(document).ready(function() {
 
   //Sistema de onepage de portada con el modulo Fullpaje.js
   $('.home').fullpage({
-    anchors: ['inicio', 'te-proponemos', 'te-ofrecemos', 'el-bosque', 'donde-estamos', 'nosotros', 'compromisos'],
+    anchors: ['inicio', 'proponemos', 'ofrecemos', 'bosque', 'estamos', 'nosotros', 'compromisos'],
     resize: false,
     slidesColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
     // css3: true ,
     slidesNavigation: true,
     afterLoad: function(anchorLink, index){
-     if(anchorLink == '3rdPage'){
-          console.log('hola afterLoad');
-     }
+      $('.menu-home').removeClass('active');
+      $('#'+anchorLink+'-menu').addClass('active');
     },
     afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
       if(anchorLink == '3rdPage'){
