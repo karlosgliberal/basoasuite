@@ -78,7 +78,7 @@ $(document).ready(function(){
       Composites.chain(ropeB, 0, 0, 0, 0, { stiffness: 0.4, length: 4});
 
       ropeB.bodies[15]['render']['sprite']['texture'] = texture; 
-
+      console.log(ropeB.bodies[15]);
       Composite.add(ropeB, Constraint.create({ 
           bodyB: ropeB.bodies[0],
           pointB: { x: 0, y: 0 },
