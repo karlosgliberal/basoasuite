@@ -271,15 +271,34 @@ text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
 	margin: 0 auto;
 }
 
-// .scroll-rounded > i {
 
-// }
+.scroll-down.scroll-first {
+	top: 23px;
+	left: 0px;
+}
+
+.scroll-up.scroll-last {
+	top: 21px;
+	left: 1px;
+}
+
 
 .scroll-up {
 	top: 9px;
 	left: 12px;
 	font-size: 19px;
+	color: fade(@brown, 70%);
+	-webkit-transition: all 200ms ease-in;
+	-o-transition: all 200ms ease-in;
+	-moz-transition: all 200ms ease-in;
+	transition: all 200ms ease-in;
+}
+
+i.scroll-up:hover, 
+i.scroll-down:hover
+ {
 	color: @brown;
+	cursor: pointer;
 }
 
 .scroll-down  {
@@ -287,7 +306,11 @@ text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
 	top: 35px;
 	left: -12px;
 	font-size: 19px;
-	color: @brown;
+	color: fade(@brown, 70%);
+	-webkit-transition: all 200ms ease-in;
+	-o-transition: all 200ms ease-in;
+	-moz-transition: all 200ms ease-in;
+	transition: all 200ms ease-in;
 }
 
 .scroll-first .scroll-down {
@@ -708,8 +731,8 @@ width: 20%;
 	height: 40px;
 	background-color: @white;
 	border-radius: 50% 50%;
-	font-size: 18px;
-  padding: 7px;
+	font-size: 19px;
+    padding: 0.4em 0.4em;
     -webkit-transition: all 200ms ease-in;
   -o-transition: all 200ms ease-in;
   -moz-transition: all 200ms ease-in;
@@ -814,7 +837,9 @@ width: 20%;
   background: url("../images/loading.gif") no-repeat 60% 50% @green;
 }
 
-
+.localizacion > li > i {
+	color:@green;
+}
 
 
 
