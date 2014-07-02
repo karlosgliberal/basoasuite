@@ -77,6 +77,13 @@ $(document).ready(function() {
     $(this).addClass('active-menu');
   });
 
+  $('.scroll-up').click(function(e){
+    $.fn.fullpage.moveSectionUp();
+  });
+
+  $('.scroll-down').click(function(e){
+    $.fn.fullpage.moveSectionDown();
+  });
 
   $('.menu-home').click(function(e){
     $('.menu-home').removeClass('active');
