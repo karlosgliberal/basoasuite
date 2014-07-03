@@ -77,6 +77,8 @@ $(document).ready(function(){
       
           console.log(ropeB.bodies.length); 
       Composites.chain(ropeB, 0, 0, 0, 0, { stiffness: 0.4, length: 4});
+      ropeB.bodies[13].positionPrev.x = 100;
+      ropeB.bodies[13].positionPrev.y = -30;
 
       ropeB.bodies[13]['render']['sprite']['texture'] = texture; 
 
