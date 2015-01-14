@@ -9,6 +9,7 @@
     <title>Basoa suites</title>
     <meta name="description" content="¿Una suite en lo alto de un árbol? Nosotros ponemos el bosque, la historia la decides tú">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="eELrht7RPl9EmgR0hwH252jMA4PkT4GrMqogAGBVl_E" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     
     <link rel="stylesheet" href="bower_components/fullpage.js/jquery.fullPage.css">
@@ -23,7 +24,7 @@
       }
     </script>
     <script src="bower_components/page/index.js"></script>
-    <script src=""></script>
+    <script src="bower_components/pace/pace.js"></script>
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
@@ -61,16 +62,25 @@
                        <li><a href="/">EUS</a></li>
                        <li><a href="/">CAT</a></li>
                        <li><a href="/">ENG</a></li>
-                       <li><a href="/">FR</a></li>
                       </ul>
                     </li>
                       <li class="menu-home" id="inicio-menu active"><a href="#inicio">Inicio</a></li>
                       <li class="menu-home" id="proponemos-menu"><a href="#proponemos">Te proponemos</a></li>
                       <li class="menu-home" id="ofrecemos-menu"><a href="#ofrecemos">Te ofrecemos</a></li>
-                      <li class="menu-home" id="bosque-menu"><a href="#bosque">El bosque</a></li>
-                      <li class="menu-home" id="estamos-menu"><a href="#estamos">Donde estamos</a></li>
+                      <li class="menu-home" id="entorno"><a href="#entorno">El entorno</a></li>
                       <li class="menu-home" id="nosotros-menu"><a href="#nosotros">Nosotros</a></li>
                       <li class="menu-home" id="compromisos-menu"><a href="#compromisos">Compromisos</a></li>
+                      <li class="menu-home dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ver suites<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="meanu">
+                          <li><a href="http://basoasuites.lodgify.com/es/463038/01-suite-belea2" target="_blank">Belea</a></li>
+                          <li><a href="http://basoasuites.lodgify.com/es/463110/04-suite-bedats2" target="_blank">Bedats</a></li>
+                          <li><a href="http://basoasuites.lodgify.com/es/463037/02-suite-beigorri" target="_blank">Beigorri</a></li>
+                          <li><a href="http://basoasuites.lodgify.com/es/463084/03-suite-okolin" target="_blank">Okolin</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-home" id="compromisos-menu"><a href="http://basoasuites.lodgify.com/es/463013/propiedades" targert="_blank">Reservas</a></li>
+                      <li class="menu-home" id="actividades-menu"><a href="#actividades" targert="_blank">Actividades</a></li>
                     </ul>
                   </div>
                 </div>
@@ -78,13 +88,16 @@
     </div>
     <!--  Fin de menu principal -->
   <!--    Secciones Home principal   -->
+  <!--   Seccion inicial -->
   <div class="section principal" id="home-inicio">
     <div class="texto-home-container">
-     <div class="texto-home-wrapper uppercase center">
-      <img class="floritura" src="images/flori.png">
-       <p class="nosotros">Nosotros ponemos el bosque</p>
-       <p class="historia">La historia la decides tú</p>
-      <img class="floritura floritura-rotate" src="images/flori.png">
+     <div class="texto-home-wrapper center">
+      <div class="divide50"></div>
+       <p class="nosotros uppercase">Nosotros ponemos el bosque</p>
+       <p class="historia uppercase">La historia la decides tú</p>
+       <div class="divide20"></div>
+      <a href="/"><img src="images/player.png"></a>
+      <p class="mt10"><a class="link-video" href="/">Ver vídeo</a></p>
      </div>
     </div>
     <div class="scroll-container">
@@ -94,7 +107,8 @@
       <p class="texto-scroll uppercase white">Scroll </p> 
     </div>
   </div>
-
+  <!-- Fin de Seccion inicial -->
+  <!-- Seccion te proponemos -->
   <div class="section proponemos" id="home-te-proponemos">
    <div class="texto-home-container proponemos-container">
      <div class="texto-home-wrapper">
@@ -112,7 +126,8 @@
       <p class="texto-scroll uppercase white">Scroll </p> 
     </div>
   </div>
-
+ <!-- Fin Seccion te proponemos -->
+  <!-- Seccion te ofrecemos -->
   <div class="section ofrecemos" id="home-te-ofrecemos">
    <div class="texto-home-container ofrecemos-container">
      <div class="texto-home-wrapper">
@@ -131,11 +146,12 @@
       <p class="texto-scroll uppercase white">Scroll </p> 
     </div>
   </div>
-
-  <div class="section bosque" id="home-bosque">
-   <div class="texto-home-container bosque-container">
+  <!-- Fin Seccion te ofrecemos -->
+  <!-- Seccion entorno -->
+  <div class="section entorno" id="home-entorno">
+   <div class="texto-home-container entorno-container">
      <div class="texto-home-wrapper">
-      <p class="title-seccion-home">El bosque</p>
+      <p class="title-seccion-home">Nuevo!!!!! Entorno</p>
          <p class="texto-secciones">El Robledal de Amati es una pequeña joya ecológica y un entorno protegido de especial interés 
           arbóreo y ornitológico. Se trata de un tipo de robledal de humedal de llanura que es exclusivo 
           de algunas zonas concretas de Álava y Navarra, vestigio de otra época en la que estos 
@@ -151,8 +167,10 @@
       <p class="texto-scroll uppercase white">Scroll </p> 
     </div>
   </div>
+  <!-- Fin Seccion entorno -->
+  <!-- Seccion nosotros -->
 
-  <div class="section estamos" id="home-estamos">
+<!--   <div class="section estamos" id="home-estamos">
    <div class="texto-home-container estamos-container">
      <div class="texto-home-wrapper">
       <p class="title-seccion-home">Donde estamos</p>
@@ -171,8 +189,8 @@
       </div>
       <p class="texto-scroll uppercase white">Scroll </p> 
     </div>
-  </div>
-
+  </div> -->
+    <!-- Seccion nosotros -->
     <div class="section nosotros-s" id="home-nosotros">
      <div class="texto-home-container estamos-container">
        <div class="texto-home-wrapper">
@@ -189,8 +207,8 @@
       <p class="texto-scroll uppercase white">Scroll </p> 
     </div>
   </div>
-
-
+  <!-- Fin Seccion nosotros -->
+  <!-- Seccion compromisos -->
   <div class="section compromisos" id="home-compromisos">
    <div class="texto-home-container compromisos-container">
      <div class="texto-home-wrapper">
@@ -201,6 +219,59 @@
         </p>
      </div>
     </div>
+    <div class="scroll-container">
+      <div class="scroll-rounded">
+        <i class="glyphicon glyphicon-chevron-up scroll-up"></i>
+        <i class="glyphicon glyphicon-chevron-down scroll-down"></i>
+      </div>
+      <p class="texto-scroll uppercase white">Scroll </p> 
+    </div>
+  </div>
+  <!-- Fin Seccion compromisos -->
+  <!-- Seccion actividades -->
+  <div class="section actividades" id="home-actividades">
+   <div class="texto-home-container actividades-container">
+     <div class="texto-home-wrapper">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <a href="#" target="_blank">
+              <img src="/images/a-ultzama.png" alt="Parque micologico">
+              <p>Parque micológico</p>
+            </a>
+          </div>
+           <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+             <a href="#" target="_blank">
+              <img src="/images/a-orgi.png" alt="Bosque de orgi">
+              <p>bosque de Orgi</p>
+            </a>
+          </div>
+           <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+             <a href="#" target="_blank">
+              <img src="/images/a-ultzama.png" alt="Centro de hípica">
+              <p>Centro de hípica</p>
+             </a>
+          </div>
+           <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+             <a href="#" target="_blank">
+              <img src="/images/a-golf.png" alt="Campo de golf">
+              <p>Campo de golf</p>
+            </a>
+          </div>
+           <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+             <a href="#" target="_blank">
+              <img src="/images/a-golf2.png" alt="Centro de golf">
+              <p>Centro de golf</p>
+             </a>
+          </div>
+           <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+             <a href="#" target="_blank">
+              <img src="/images/a-miel.png" alt="Museo de la miel">
+              <p>Museo de la miel</p>
+            </a>
+          </div>
+        </div>  
+     </div>
+    </div>
     <div class="scroll-container ultima">
       <div class="scroll-rounded">
         <i class="glyphicon glyphicon-chevron-up scroll-up scroll-last"></i>
@@ -208,9 +279,10 @@
       <p class="texto-scroll uppercase white">Scroll </p> 
     </div>
     <div class="logos center">
-      <img class="logos-t" src="/images/logos1.png" alt="Logos">
+      <img class="logos-t" src="/images/logos.png" alt="Logos">
     </div>
   </div>
+  <!-- Fin Seccion actividades -->
 </div>
 <!-- Fin de Home principal -->
 <!-- Home de Casas -->
@@ -290,7 +362,7 @@
         <div id="belea-carrusel" class="carousel slide">
           <div class="carousel-inner">
             <div class="active item">
-              <div class="fill" style="background-image: url('../images/belea1.jpg');">
+              <div class="fill" style="background-image: url('images/belea1.jpg');">
                 <div class="texto-casas-container">
                   <div class="texto-casas-wrapper">
                     <h3 class="titular-casas">Suite Belea</h3>
@@ -308,17 +380,17 @@
               </div>
             </div>
             <div class="item">
-              <div class="fill" style="background-image: url('../images/belea2.jpg');">
+              <div class="fill" style="background-image: url('images/belea2.jpg');">
           
               </div>
             </div>
             <div class="item">
-              <div class="fill" style="background-image: url('../images/belea3.jpg');">
+              <div class="fill" style="background-image: url('images/belea3.jpg');">
 
               </div>
             </div>
               <div class="item">
-              <div class="fill" style="background-image: url('../images/belea4.jpg');">
+              <div class="fill" style="background-image: url('images/belea4.jpg');">
 
               </div>
             </div>
@@ -338,7 +410,7 @@
         <div id="beigorri-carrusel" class="carousel slide">
           <div class="carousel-inner">
             <div class="active item">
-              <div class="fill" style="background-image: url('../images/beigorri1.jpg');">
+              <div class="fill" style="background-image: url('images/beigorri1.jpg');">
                 <div class="texto-casas-container">
                   <div class="texto-casas-wrapper">
                     <h3 class="titular-casas">Suite Beigorri</h3>
@@ -356,17 +428,17 @@
               </div>
             </div>
             <div class="item">
-              <div class="fill" style="background-image: url('../images/beigorri2.jpg');">
+              <div class="fill" style="background-image: url('images/beigorri2.jpg');">
     
               </div>
             </div>
             <div class="item">
-              <div class="fill" style="background-image: url('../images/beigorri3.jpg');">
+              <div class="fill" style="background-image: url('images/beigorri3.jpg');">
    
               </div>
             </div>
             <div class="item">
-              <div class="fill" style="background-image: url('../images/beigorri4.jpg');">
+              <div class="fill" style="background-image: url('images/beigorri4.jpg');">
   
               </div>
             </div>
@@ -386,7 +458,7 @@
         <div id="okolin-carrusel" class="carousel slide">
           <div class="carousel-inner">
             <div class="active item">
-              <div class="fill" style="background-image: url('../images/okolin1.jpg');">
+              <div class="fill" style="background-image: url('images/okolin1.jpg');">
                 <div class="texto-casas-container">
                   <div class="texto-casas-wrapper">
                     <h3 class="titular-casas">Suite Okolin</h3>
@@ -404,19 +476,19 @@
               </div>
             </div>
             <div class="item">
-              <div class="fill" style="background-image: url('../images/okolin2.jpg');">
+              <div class="fill" style="background-image: url('images/okolin2.jpg');">
               </div>
             </div>
             <div class="item">
-              <div class="fill" style="background-image: url('../images/okolin3.jpg');">
+              <div class="fill" style="background-image: url('images/okolin3.jpg');">
               </div>
             </div>
              <div class="item">
-              <div class="fill" style="background-image: url('../images/okolin4.jpg');">
+              <div class="fill" style="background-image: url('images/okolin4.jpg');">
               </div>
             </div>
            <div class="item">
-              <div class="fill" style="background-image: url('../images/okolin5.jpg');">
+              <div class="fill" style="background-image: url('images/okolin5.jpg');">
               </div>
             </div>
           </div>
@@ -435,7 +507,7 @@
         <div id="bedats-carrusel" class="carousel slide">
           <div class="carousel-inner">
             <div class="active item">
-              <div class="fill" style="background-image: url('../images/bedats1.jpg');">
+              <div class="fill" style="background-image: url('images/bedats1.jpg');">
                 <div class="texto-casas-container">
                   <div class="texto-casas-wrapper">
                     <h3 class="titular-casas">Suite Bedats</h3>
@@ -453,15 +525,15 @@
               </div>
             </div>
             <div class="item">
-              <div class="fill" style="background-image: url('../images/bedats2.jpg');">
+              <div class="fill" style="background-image: url('images/bedats2.jpg');">
               </div>
             </div>
             <div class="item">
-              <div class="fill" style="background-image: url('../images/bedats3.jpg');">
+              <div class="fill" style="background-image: url('images/bedats3.jpg');">
               </div>
             </div>
              <div class="item">
-              <div class="fill" style="background-image: url('../images/bedats4.jpg');">
+              <div class="fill" style="background-image: url('images/bedats4.jpg');">
               </div>
             </div>
           </div>
@@ -480,7 +552,7 @@
         <div id="recepcion-carrusel" class="carousel slide">
           <div class="carousel-inner">
             <div class="active item">
-              <div class="fill" style="background-image: url('../images/amati1.jpg');">
+              <div class="fill" style="background-image: url('images/amati1.jpg');">
                 <div class="texto-casas-container">
                   <div class="texto-casas-wrapper">
                     <h3 class="titular-casas">Casa Amati</h3>
@@ -495,11 +567,11 @@
               </div>
             </div>
             <div class="item">
-              <div class="fill" style="background-image: url('../images/amati2.jpg');">
+              <div class="fill" style="background-image: url('images/amati2.jpg');">
               </div>
             </div>
             <div class="item">
-              <div class="fill" style="background-image: url('../images/amati3.jpg');">
+              <div class="fill" style="background-image: url('images/amati3.jpg');">
               </div>
             </div>
           </div>
@@ -535,7 +607,7 @@
 
       </script>
        <!-- build:js scripts/bower/main.js -->
-        <script src="bower_components/jQuery/jquery.js"></script>
+        <script src="bower_components/jquery/jquery.js"></script>
         <script src="bower_components/jquery.easing/js/jquery.easing.js"></script>
         <script src="bower_components/page/index.js"></script>
         <script src="bower_components/fullpage.js/jquery.fullPage.js"></script>

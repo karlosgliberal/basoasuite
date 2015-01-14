@@ -60,7 +60,7 @@ $(document).ready(function() {
     }, 900);
   });
 
-  //Acceso a las casas mediante el menú
+//Acceso a las casas mediante el menú
   $('.casas').click(function(e){
     e.preventDefault();
     $('.carrusel-off').each(function(index){
