@@ -23,7 +23,7 @@ module.exports = function (grunt) {
     yeoman: yeomanConfig,
     watch: {
       less: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
+        files: ['<%= yeoman.app %>/styles/{,*/}*.less', '<%= yeoman.app %>/bower_components/bootstrap/**/*.less'],
         tasks: ['less']
       },
       gruntfile: {
