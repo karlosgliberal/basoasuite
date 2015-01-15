@@ -82,11 +82,15 @@ $(document).ready(function() {
   $('#boton-casas').click(function(e){
     $('.home-casas').transition({ left: 0 }, 800, 'ease');
     $('#boton-casas').transition({opacity:0}, 800, 'ease');
+    $('#boton-reservar').transition({opacity:0}, 800, 'ease');
+    $('#boton-regalar').transition({opacity:0}, 800, 'ease');
     $('#home').transition({opacity:0}, 2000, 'ease');
     setTimeout(function() {
       $('#boton-volver').transition({opacity:1}, 'ease');
       $('#boton-volver').removeClass('boton-opacity');
       $('#boton-casas').addClass('boton-opacity');
+      $('#boton-regalar').addClass('boton-opacity');
+      $('#boton-reservar').addClass('boton-opacity');
     }, 900);
   });
 
@@ -98,6 +102,10 @@ $(document).ready(function() {
     setTimeout(function() {
       $('#boton-casas').transition({opacity:1}, 'ease');
       $('#boton-casas').removeClass('boton-opacity');
+      $('#boton-reservar').transition({opacity:1}, 'ease');
+      $('#boton-reservar').removeClass('boton-opacity');
+      $('#boton-regalar').transition({opacity:1}, 'ease');
+      $('#boton-regalar').removeClass('boton-opacity');
       $('#boton-volver').addClass('boton-opacity');
     }, 900);
   });
