@@ -35,6 +35,13 @@ $(document).ready(function() {
     return false;
   });
 
+  $('.cerrar').click(function(e){
+    e.preventDefault();
+    player.api('pause');
+    $('.video-basoa').hide('slow');
+    $('.ocultar').fadeIn('slow');
+  })
+
   //Sistema de left dinamico para el slide de casas
   var left = '80%';
   if ($(this).width() >= 1280) {
