@@ -1,13 +1,38 @@
 
 $(document).ready(function() {
 
-  $('.video-player').append('<iframe id="player" src="http://player.vimeo.com/video/71340975?api=1&amp;player_id=player" width="800" height="400" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
+  if(!$.browser){
+    $.browser={
+      chrome:false,
+      mozilla:false,
+      opera:false,
+      msie:false,
+      safari:false
+    };
+    var ua=navigator.userAgent;
+        $.each($.browser,function(c,a){
+        $.browser[c]=((new RegExp(c,'i').test(ua)))?true:false;
+            if($.browser.mozilla && c =='mozilla'){$.browser.mozilla=((new RegExp('firefox','i').test(ua)))?true:false;};
+            if($.browser.chrome && c =='safari'){$.browser.safari=false;};
+        });
+  };
+
+  $('.video-player').append('<iframe src="//player.vimeo.com/video/115274012?title=0&amp;byline=0&amp;portrait=0" width="800" height="335" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
   var iframe = $("iframe").get(0);
   var player = $f(iframe);
   player.addEvent('ready', function(){ 
     if($.browser.mozilla){
       player.api('play');
     }
+  });
+
+  $('.boton-play').click(function(e){
+    console.log('hhh');
+    e.preventDefault();
+    $('.ocultar').hide('slow');
+    $('.video-basoa').fadeIn('slow');
+    player.api('play');
+    return false;
   });
 
   //Sistema de left dinamico para el slide de casas
