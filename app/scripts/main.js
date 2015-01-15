@@ -1,5 +1,15 @@
 
 $(document).ready(function() {
+
+  $('.video-player').append('<iframe id="player" src="http://player.vimeo.com/video/71340975?api=1&amp;player_id=player" width="800" height="400" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
+  var iframe = $("iframe").get(0);
+  var player = $f(iframe);
+  player.addEvent('ready', function(){ 
+    if($.browser.mozilla){
+      player.api('play');
+    }
+  });
+
   //Sistema de left dinamico para el slide de casas
   var left = '80%';
   if ($(this).width() >= 1280) {
