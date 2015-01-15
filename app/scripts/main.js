@@ -62,7 +62,7 @@ $(document).ready(function() {
 
   //Sistema de onepage de portada con el modulo Fullpaje.js
   $('.home').fullpage({
-    anchors: ['inicio', 'proponemos', 'ofrecemos', 'bosque', 'estamos', 'nosotros', 'compromisos'],
+    anchors: ['inicio', 'proponemos', 'ofrecemos', 'entorno', 'nosotros', 'compromisos', 'actividades'],
     resize: false,
     slidesColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
     // css3: true ,
